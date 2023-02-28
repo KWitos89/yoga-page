@@ -1,0 +1,45 @@
+.courses {
+    display: grid;
+    gap: 30px;
+
+    &__content {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 20px;
+        place-content: center;
+        text-align: center;
+    }
+
+    &__text {
+        width: 339px;
+    }
+
+    &__boxCards {
+        display: grid;
+        gap: 25px;
+        place-content: center;
+
+        @media (min-width:765px) {
+            grid-template-columns: repeat(2, 1fr);
+
+            .courses__cards:nth-child(3) {
+                place-self: center;
+                grid-column: span 2;
+            }
+        }
+
+        @media (min-width:1024px) {
+            grid-template-columns: repeat(3, 1fr);
+
+            .courses__cards:nth-child(3) {
+                grid-column: 3/4;
+            }
+        }
+    }
+
+    &__actionBox {
+        margin-top: 25px;
+        margin-inline: auto;
+        width: max-content;
+    }
+}

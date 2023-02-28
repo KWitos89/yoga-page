@@ -1,0 +1,57 @@
+:root {
+    //  COLORS //
+
+    --color-primary-white: rgba(255, 255, 255, 1);
+    --color-primary-light: rgba(255, 241, 232, 1);
+    --color-primary: rgba(255, 159, 102, 1);
+    --color-primary-dark: rgb(250, 131, 62);
+    --shadow-primary-dark: 0 10px 20px rgba(255, 159, 102, .19),
+        0 6px 6px rgba(255, 159, 102, .23);
+
+
+    --color-scondary-green-veryLight: rgba(212, 238, 233, 1);
+    --color-secondary-green-light: rgba(148, 202, 192, 1);
+    --color-secondary-green: rgba(69, 160, 144, 1);
+    --color-secondary-green-dark: rgba(37, 134, 117, 1);
+    --color-secondary-yellow: rgba(237, 201, 136, 1);
+    --color-secondary-pink-light: rgba(255, 233, 228, 1);
+    --color-secondary-pink: rgba(254, 174, 163, 1);
+    --color-secondary-pink-deep: rgba(254, 174, 163, 1);
+
+    --color-text-heading: rgba(28, 10, 10, 1);
+    --color-text-p: rgba(88, 79, 73, 1);
+
+    --bg-color: rgba(245, 246, 249, 1);
+    --clr: rgba(176, 180, 192, 1);
+    --color-shape: rgba(232, 238, 240, 1);
+    --clr-1: rgba(207, 207, 207, 1);
+    --clr-2: rgba(244, 245, 247, 1);
+
+    //  FONTS //    
+
+    --ff: 'Inter', sans-serif;
+    --ff-special: 'Homemade Apple', cursive;
+
+    --fs-h1: clamp(2.25rem, 1.5017605633802815rem + 3.1924882629107985vw, 4.375rem);
+    --fs-h2: clamp(1.625rem, 1.096830985915493rem + 2.253521126760563vw, 3.125rem);
+    --fs-h3: clamp(1.125rem, 0.772887323943662rem + 1.5023474178403755vw, 2.125rem);
+    --fs-h4: clamp(0.875rem, 0.6109154929577465rem + 1.1267605633802815vw, 1.625rem);
+    --fs-h5-bold: clamp(0.75rem, 0.4859154929577465rem + 1.1267605633802815vw, 1.5rem);
+    --fs-text: clamp(0.75rem, 0.6619718309859155rem + 0.3755868544600939vw, 1rem);
+    --fs-text-2: clamp(0.625rem, 0.49295774647887325rem + 0.5633802816901408vw, 1rem);
+    --fs-text-special: clamp(1rem, 0.647887323943662rem + 1.5023474178403755vw, 2rem);
+    --fs-btn: clamp(0.625rem, 0.448943661971831rem + 0.7511737089201878vw, 1.125rem);
+    --fs-logo: clamp(0.875rem, 0.7429577464788732rem + 0.5633802816901408vw, 1.25rem);
+    --fs-nav: 1rem;
+
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+
+}

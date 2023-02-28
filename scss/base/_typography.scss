@@ -1,0 +1,45 @@
+h1 {
+    color: var(--color-text-heading);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-800);
+    line-height: 46px;
+
+    @media(min-width:90em) {
+        font-weight: var(--fw-900);
+        line-height: 80px;
+    }
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+}
+
+h5 {
+    font-size: var(--fs-h5-bold);
+}
+
+p {
+    color: var(--color-text-p);
+    font-size: var(--fs-text);
+    font-weight: var(--fw-400);
+    line-height: 22px;
+
+    @media(min-width:90em) {
+        line-height: 28px;
+    }
+}
+
+.header__textLogo {
+    color: var(--color-text-heading);
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-700);
+    line-height: 30px;
+}

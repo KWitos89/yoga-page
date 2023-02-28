@@ -1,0 +1,93 @@
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 140px;
+
+    @media (min-width:768px) {
+        grid-template-columns: 1fr 1fr max-content max-content;
+        grid-template-rows: 1fr 1fr;
+
+        &__title {
+            grid-column: 3 /-3;
+            grid-row: 1/2;
+            place-self: center;
+        }
+
+        &__signature {
+            grid-column: 3/-3;
+            grid-row: 2/3;
+        }
+
+        .info__cards--one {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .info__cards--two {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .info__cards--three {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .info__cards--four {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    }
+
+    &__title {
+        grid-column: span 2;
+        width: 15ch;
+    }
+
+    &__signature {
+        grid-column: span 2;
+    }
+
+    &__specialText {
+        color: var(--color-primary);
+        font-family: var(--ff-special);
+        font-size: var(--fs-text-special);
+        font-weight: var(--fw-400);
+    }
+
+    &__textSignature {
+        color: var(--color-text-heading);
+        font-family: var(--ff);
+        font-size: var(--fs-h4);
+        font-weight: bold;
+    }
+
+    &__specialColor {
+        color: var(--color-text-p);
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    &__cards {
+        display: grid;
+        row-gap: 16px;
+    }
+
+    &__cardNumber {
+        font-size: var(--fs-h2);
+        font-weight: var(--fw-700)
+    }
+
+    &__cardsTitle {
+        font-size: var(--fs-h5-bold);
+        font-weight: var(--fw-700);
+    }
+
+    &__cardsText {
+        font-size: var(--fs-text-2);
+        font-weight: var(--fw-400);
+        max-width: 24ch;
+    }
+}
