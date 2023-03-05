@@ -1,0 +1,107 @@
+.people {
+    padding-top: 150px;
+    padding-bottom: 300px;
+    margin-bottom: 300px;
+
+    &__title {
+        margin-inline: auto;
+        margin-bottom: 125px;
+        text-align: center;
+        width: 15ch;
+    }
+
+    &__box-slider {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 400px;
+        position: relative;
+        // padding-inline: .5rem;
+        max-width: 303px;
+        width: 100%;
+        overflow: hidden;
+        margin-inline: auto;
+
+
+        @media (min-width:768px) {
+            max-width: 643px;
+            padding-inline: 1.5rem;
+            // border: 1px solid ;
+        }
+    }
+
+    .wrapper__slider {
+        height: 303px;
+        max-width: 339px;
+        width: 100%;
+        transition: all .35s linear;
+
+        @media (min-width:768px) {
+            max-width: 643px;
+            // padding-inline: 1rem;
+            // border: 1px solid ;
+        }
+    }
+
+    &__cards:nth-child(1) {
+        transform: translateX(0);
+    }
+
+    &__cards:nth-child(2) {
+        transform: translateX(-102%);
+        // opacity: 0;
+    }
+
+    &__cards:nth-child(3) {
+        transform: translateX(102%);
+        // opacity: 0;
+    }
+
+    &__cards {
+        transition: all .35s linear;
+    }
+
+    .people__cards--active {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .people__cards--no--active {
+        transform: translateX(-102%);
+        // opacity: 0;
+    }
+
+    &__box-dot {
+        align-items: center;
+        display: flex;
+        column-gap: 12px;
+        margin-inline: auto;
+        width: max-content;
+    }
+
+    &__dot {
+        aspect-ratio: 1/1;
+        border: 1px solid var(--clr);
+        border-radius: 50%;
+        box-shadow: 1px 3px 5px -2px rgba(0, 0, 0, 0.4),
+            -1px 3px 5px rgba(0, 0, 0, 0.1);
+        transition: all .35s linear;
+        width: 20px;
+    }
+
+    .dot--active {
+        box-shadow: 1px 3px 5px -2px rgba(0, 0, 0, 0.7),
+            -1px 3px 5px rgba(0, 0, 0, 0.5);
+        position: relative;
+        transform: scale(.8);
+
+        &::after {
+            border-radius: 50%;
+            background-color: orange;
+            content: '';
+            inset: 0;
+            position: absolute;
+            transform: scale(.6);
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.people__cards {
+    border-radius: 20px;
+    display: grid;
+    gap: 28px;
+    grid-template-rows: repeat(3, 1fr);
+    height: 303px;
+    max-width: 738px;
+    width: 100%;
+    margin-inline: auto;
+    position: absolute;
+    text-align: center;
+    transition: all .35s linear;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        padding: 2px;
+        background: linear-gradient(180deg, #EDEDED 0%, rgba(255, 255, 255, 0) 100%);
+        mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        transition: all .35s linear;
+    }
+
+    &:is(:hover, :active, :focus) {
+        box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4),
+            -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
+        transform: scale(.95);
+    }
+
+    &:is(:hover, :active, :focus) &-box-img {
+        box-shadow: 10px 35px 25px rgba(0, 0, 0, 0.4),
+            -10px 35px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    &:is(:hover, :active, :focus)::before {
+        padding: .5px;
+    }
+
+    &-content {
+        grid-row: 2/3;
+        font-size: 10px;
+        margin-inline: auto;
+        width: 45ch;
+        // display: none;
+    }
+
+    &-info {
+        grid-row: 3/4;
+    }
+
+    &-box-img {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;
+        transition: all .35s linear;
+        position: absolute;
+        width: 70px;
+        overflow: hidden;
+    }
+}
