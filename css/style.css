@@ -201,12 +201,16 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 720px) {
   .wrapper__bg--shape .shape {
+    display: block;
     max-width: 720px;
     position: absolute;
     right: 0;
     top: 0;
     width: 70%;
     z-index: -1;
+  }
+  .wrapper__bg--shape .img__green {
+    top: 450px;
   }
 }
 
@@ -883,7 +887,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__boxImg::after {
   aspect-ratio: 1/1;
-  background-image: url(./../../img/Shape.png);
+  background-image: url(../img/Shape.png);
   background-repeat: no-repeat;
   background-size: 100% 255px;
   content: "";

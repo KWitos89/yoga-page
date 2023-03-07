@@ -58,6 +58,7 @@
   @media (min-width:720px) {
 
     .shape {
+      display: block;
       max-width: 720px;
       position: absolute;
       right: 0;
@@ -65,5 +66,8 @@
       width: calc(100% - 30%);
       z-index: -1;
     }
+.img__green {
+  top: 450px;
+}
   }
 }
