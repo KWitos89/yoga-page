@@ -1,11 +1,11 @@
 .people {
     padding-top: 150px;
-    padding-bottom: 300px;
-    margin-bottom: 300px;
+    padding-bottom: 100px;
+    position: relative;
 
     &__title {
         margin-inline: auto;
-        margin-bottom: 125px;
+        margin-bottom: 50px;
         text-align: center;
         width: 15ch;
     }
@@ -13,48 +13,41 @@
     &__box-slider {
         align-items: center;
         display: flex;
-        justify-content: center;
         height: 400px;
-        position: relative;
-        // padding-inline: .5rem;
+        justify-content: center;
         max-width: 303px;
-        width: 100%;
-        overflow: hidden;
         margin-inline: auto;
-
+        overflow: hidden;
+        position: relative;
+        width: 100%;
 
         @media (min-width:768px) {
             max-width: 643px;
             padding-inline: 1.5rem;
-            // border: 1px solid ;
         }
     }
 
     .wrapper__slider {
         height: 303px;
         max-width: 339px;
-        width: 100%;
         transition: all .35s linear;
+        width: 100%;
 
         @media (min-width:768px) {
-            max-width: 643px;
-            // padding-inline: 1rem;
-            // border: 1px solid ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            max-width: 700px;
+            width: 100%;
         }
-    }
-
-    &__cards:nth-child(1) {
-        transform: translateX(0);
     }
 
     &__cards:nth-child(2) {
         transform: translateX(-102%);
-        // opacity: 0;
     }
 
     &__cards:nth-child(3) {
         transform: translateX(102%);
-        // opacity: 0;
     }
 
     &__cards {
@@ -63,12 +56,10 @@
 
     .people__cards--active {
         transform: translateX(0%);
-        opacity: 1;
     }
 
     .people__cards--no--active {
         transform: translateX(-102%);
-        // opacity: 0;
     }
 
     &__box-dot {
@@ -104,4 +95,15 @@
             transform: scale(.6);
         }
     }
+&__img--circle {
+    position: absolute;
+    top: 50%;
+    right: -3%;
+}
+
+&__img--vector {
+    position: absolute;
+    bottom: 15%;
+    left: -3%;
+}
 }

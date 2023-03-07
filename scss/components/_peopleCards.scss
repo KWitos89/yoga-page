@@ -4,10 +4,11 @@
     gap: 28px;
     grid-template-rows: repeat(3, 1fr);
     height: 303px;
-    max-width: 738px;
+    max-width: 600px;
     width: 100%;
     margin-inline: auto;
     position: absolute;
+    padding-inline: 8px;
     text-align: center;
     transition: all .35s linear;
 
@@ -29,14 +30,19 @@
     }
 
     &:is(:hover, :active, :focus) {
-        box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4),
-            -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
+        box-shadow: 10px 35px 25px -35px rgba(0, 0, 0, 0.4),
+        -10px 35px 25px -30px rgba(0, 0, 0, 0.1);
         transform: scale(.95);
+
+        @media (min-width:768px) {
+        box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4),
+        -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
+        }
     }
 
     &:is(:hover, :active, :focus) &-box-img {
-        box-shadow: 10px 35px 25px rgba(0, 0, 0, 0.4),
-            -10px 35px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4),
+        -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
     }
 
     &:is(:hover, :active, :focus)::before {
@@ -47,8 +53,7 @@
         grid-row: 2/3;
         font-size: 10px;
         margin-inline: auto;
-        width: 45ch;
-        // display: none;
+        max-width: 60ch;
     }
 
     &-info {

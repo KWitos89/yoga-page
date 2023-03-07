@@ -663,10 +663,11 @@ body::-webkit-scrollbar-thumb {
   gap: 28px;
   grid-template-rows: repeat(3, 1fr);
   height: 303px;
-  max-width: 738px;
+  max-width: 600px;
   width: 100%;
   margin-inline: auto;
   position: absolute;
+  padding-inline: 8px;
   text-align: center;
   transition: all 0.35s linear;
 }
@@ -684,11 +685,16 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.35s linear;
 }
 .people__cards:is(:hover, :active, :focus) {
-  box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4), -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 35px 25px -35px rgba(0, 0, 0, 0.4), -10px 35px 25px -30px rgba(0, 0, 0, 0.1);
   transform: scale(0.95);
 }
+@media (min-width: 768px) {
+  .people__cards:is(:hover, :active, :focus) {
+    box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4), -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
+  }
+}
 .people__cards:is(:hover, :active, :focus) .people__cards-box-img {
-  box-shadow: 10px 35px 25px rgba(0, 0, 0, 0.4), -10px 35px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 35px 25px -20px rgba(0, 0, 0, 0.4), -10px 35px 25px -20px rgba(0, 0, 0, 0.1);
 }
 .people__cards:is(:hover, :active, :focus)::before {
   padding: 0.5px;
@@ -697,7 +703,7 @@ body::-webkit-scrollbar-thumb {
   grid-row: 2/3;
   font-size: 10px;
   margin-inline: auto;
-  width: 45ch;
+  max-width: 60ch;
 }
 .people__cards-info {
   grid-row: 3/4;
@@ -877,7 +883,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__boxImg::after {
   aspect-ratio: 1/1;
-  background-image: url(../../img/Shape.png);
+  background-image: url(./../../img/Shape.png);
   background-repeat: no-repeat;
   background-size: 100% 255px;
   content: "";
@@ -1167,25 +1173,25 @@ body::-webkit-scrollbar-thumb {
 
 .people {
   padding-top: 150px;
-  padding-bottom: 300px;
-  margin-bottom: 300px;
+  padding-bottom: 100px;
+  position: relative;
 }
 .people__title {
   margin-inline: auto;
-  margin-bottom: 125px;
+  margin-bottom: 50px;
   text-align: center;
   width: 15ch;
 }
 .people__box-slider {
   align-items: center;
   display: flex;
-  justify-content: center;
   height: 400px;
-  position: relative;
+  justify-content: center;
   max-width: 303px;
-  width: 100%;
-  overflow: hidden;
   margin-inline: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .people__box-slider {
@@ -1196,16 +1202,17 @@ body::-webkit-scrollbar-thumb {
 .people .wrapper__slider {
   height: 303px;
   max-width: 339px;
-  width: 100%;
   transition: all 0.35s linear;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .people .wrapper__slider {
-    max-width: 643px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
   }
-}
-.people__cards:nth-child(1) {
-  transform: translateX(0);
 }
 .people__cards:nth-child(2) {
   transform: translateX(-102%);
@@ -1218,7 +1225,6 @@ body::-webkit-scrollbar-thumb {
 }
 .people .people__cards--active {
   transform: translateX(0%);
-  opacity: 1;
 }
 .people .people__cards--no--active {
   transform: translateX(-102%);
@@ -1252,4 +1258,14 @@ body::-webkit-scrollbar-thumb {
   inset: 0;
   position: absolute;
   transform: scale(0.6);
+}
+.people__img--circle {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+}
+.people__img--vector {
+  position: absolute;
+  bottom: 15%;
+  left: -3%;
 }/*# sourceMappingURL=style.css.map */
